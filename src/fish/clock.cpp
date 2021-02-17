@@ -3,15 +3,15 @@
 #include "clock.h"
 
 //Clock pins.
-int CLOCK_PIN_SDA = A4;
-int CLOCK_PIN_SCL = A5;
+int CLOCK_PIN_SDA = A0;
+int CLOCK_PIN_SCL = A1;
 
 void setupClock(){
   pinMode(CLOCK_PIN_SDA, OUTPUT);
   digitalWrite(CLOCK_PIN_SDA, HIGH);
   pinMode(CLOCK_PIN_SCL, OUTPUT);
   digitalWrite(CLOCK_PIN_SCL, LOW);
-  Wire.begin();
+  Wire.begin(A0,A1);
 }
 
 clock_time read_ds1307(){

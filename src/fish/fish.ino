@@ -30,8 +30,8 @@ void start_mode(){
 
 //Read variables modes.
 void read_mode(){
-  //clock_time current_time = read_ds1307();
-  current_time = createTime(9,2,0);
+  current_time = read_ds1307();
+  //current_time = createTime(8,30,0);
   print_time(current_time);
   state=2;
 }
@@ -140,4 +140,5 @@ void loop(){
       sleep_mode();
       break;      
   }
+  delay(500);
 }

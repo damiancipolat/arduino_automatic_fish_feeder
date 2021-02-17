@@ -1,0 +1,2 @@
+void setupMotor();
+void motorStep();
